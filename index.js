@@ -40,7 +40,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ user }),
+      body: JSON.stringify({ message: 'User has been created' }),
     };
   } catch (error) {
     console.error('Error:', error);
