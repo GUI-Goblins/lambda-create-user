@@ -1,5 +1,4 @@
 const dynamoose = require('dynamoose');
-const { v4: uuidv4 } = require('uuid');
 
 const userSchema = new dynamoose.Schema({
   id: String,
@@ -19,7 +18,7 @@ const User = dynamoose.model('midterm-users', userSchema);
 
 exports.handler = async (event) => {
   const requestBody = JSON.parse(event.body);
-  const id = uuidv4();
+  const id = requestBody.id;
   const name = requestBody.name;
   const age = requestBody.age;
   const race = requestBody.race;
