@@ -7,11 +7,11 @@ const userSchema = new dynamoose.Schema({
   age: Number,
   race: {
     type: String,
-    enum: ['human', 'elf', 'dwarf'],
+    enum: ['human', 'elf', 'dwarf', 'gnome'],
   },
   class: {
     type: String,
-    enum: ['fighter', 'rogue', 'sorcerer'],
+    enum: ['fighter', 'rogue', 'sorcerer', 'cleric'],
   },
 });
 
@@ -40,7 +40,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'User created successfully' }),
+      body: JSON.stringify({ user }),
     };
   } catch (error) {
     console.error('Error:', error);
