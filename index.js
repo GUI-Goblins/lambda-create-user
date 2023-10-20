@@ -6,11 +6,11 @@ const userSchema = new dynamoose.Schema({
   age: Number,
   race: {
     type: String,
-    enum: ['human', 'elf', 'dwarf', 'gnome'],
+    // enum: ['human', 'elf', 'dwarf', 'gnome'],
   },
   class: {
     type: String,
-    enum: ['fighter', 'rogue', 'sorcerer', 'cleric'],
+    // enum: ['fighter', 'rogue', 'sorcerer', 'cleric'],
   },
 });
 
